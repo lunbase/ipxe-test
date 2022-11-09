@@ -1,0 +1,9 @@
+EXPORTS
+dio_read_port
+dio_write_port
+dio_read_mem
+dio_write_mem
+dio_map_memory
+dio_unmap_memory
+dio_init
+dio_exit

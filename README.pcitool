@@ -1,0 +1,11 @@
+How to enable userspace physical memory access?
+
+@EFI+GRUB2
+$ vi /etc/default/grub
+GRUB_CMDLINE_LINUX="${GRUB_CMDLINE_LINUX} iomem=relaxed"
+$ grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg
+$ reboot
+$ cat /proc/cmdline | grep iomem
+
+@BIOS+GRUB
+append "iomem=relaxed" to kernel command line in /etc/grub/grub.cfg
